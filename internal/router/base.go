@@ -8,6 +8,6 @@ import (
 func InitBaseRouter(r *gin.RouterGroup) {
 	routerGroup := r.Group("base")
 	{
-		routerGroup.GET("test", controller.Base{}.Test)
+		routerGroup.GET("test", (&controller.Base{}).Test)
 	}
 }

@@ -9,7 +9,7 @@ const defaultCode = 1001
 
 type Body struct {
 	Code int         `json:"code"`
-	Msg  string      `json:"msg"`
+	Msg  interface{} `json:"msg"`
 	Data interface{} `json:"data"`
 }
 
@@ -19,7 +19,7 @@ func ResponseCode(c *gin.Context, code int, msg string, data interface{}) {
 		msg,  // message
 		data, // 数据
 	})
-	return
+	c.Abort()
 }
 
 func Response(c *gin.Context, msg string, data interface{}) {
@@ -28,5 +28,5 @@ func Response(c *gin.Context, msg string, data interface{}) {
 		msg,         // message
 		data,        // 数据
 	})
-	return
+	c.Abort()
 }
