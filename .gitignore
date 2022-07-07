@@ -1,3 +1,6 @@
 
 *.log
 *.xml
+docs/swagger.json
+docs/docs.go
+docs/swagger.yaml
