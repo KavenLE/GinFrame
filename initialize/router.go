@@ -1,6 +1,7 @@
 package initialize
 
 import (
+	_ "GinFrame/docs"
 	"GinFrame/internal/router"
 	"GinFrame/middlewares"
 	"github.com/gin-gonic/gin"

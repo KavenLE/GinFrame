@@ -13,7 +13,7 @@ type Base struct{}
 // @Accept json
 // @Tags Base
 // @Security Bearer
-// @Produce  form
+// @Produce  json
 // @Param Param path int true "param"
 // @Resource Name
 // @Router /base/test [get]

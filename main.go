@@ -21,7 +21,7 @@ import (
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
 
 // @host 127.0.0.1:8000
-// @BasePath /v1 // 此处可修改为自己所需的基础uri
+// @BasePath /v1
 
 func main() {
 	initialize.InitConfig()
