@@ -4,6 +4,7 @@ import (
 	_ "GinFrame/docs"
 	"GinFrame/internal/router"
 	"GinFrame/middlewares"
+
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/files"
 	"github.com/swaggo/gin-swagger"
@@ -13,7 +14,8 @@ import (
 func Routers() *gin.Engine {
 	Router := gin.Default()
 	// 配置日志
-	Router.Use(middlewares.GinLogger(), middlewares.GinRecovery(true))
+	//Router.Use(middlewares.GinLogger(), middlewares.GinRecovery(true))
+	Router.Use(GinLogger(), GinRecovery(true))
 	// 配置跨域
 	Router.Use(middlewares.Next())
 

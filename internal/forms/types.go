@@ -5,5 +5,5 @@ type PageForm struct {
 	pageSize int64 `form:"pageSize"`
 }
 type TestForm struct {
-	Param string `form:"param"`
+	Param string `json:"param"`
 }

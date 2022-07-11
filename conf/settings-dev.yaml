@@ -3,7 +3,6 @@ server:
   port: 8000
   readTimeout: 60
   writeTimeout: 60
-  logPath: "./logs"
   UploadSavePath: "./static/uploads"
   UploadServerUrl: "http://127.0.0.1:8000/static"
   UploadImageMaxSize: 5 #MB
@@ -25,6 +24,13 @@ redis:
   host: "127.0.0.1"
   port: 6379
   password:
+
+logInfo:
+  level: "debug"
+  filename: "./logs/app.log"
+  maxSize: 200
+  maxAge: 7
+  maxBackups: 10
 
 jwt:
   key: "ZVkTfRWCC5jHJli7WN41JExJ1FfsBbmW"

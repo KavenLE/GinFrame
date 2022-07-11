@@ -6,6 +6,7 @@ type ServerConfig struct {
 	ServerInfo BaseConfig  `mapstructure:"server"`
 	MysqlInfo  MysqlConfig `mapstructure:"mysql"`
 	RedisInfo  RedisConfig `mapstructure:"redis"`
+	LogInfo    LogConfig   `mapstructure:"logInfo"`
 }
 
 type BaseConfig struct {
@@ -35,5 +36,13 @@ type RedisConfig struct {
 }
 
 type JWTConfig struct {
-	SigningKey string `mapstructure:"key" json:"key"`
+	SigningKey string `mapstructure:"key"`
+}
+
+type LogConfig struct {
+	Level      string `mapstructure:"level"`
+	Filename   string `mapstructure:"filename"`
+	MaxSize    int    `mapstructure:"maxSize"`
+	MaxAge     int    `mapstructure:"maxAge"`
+	MaxBackups int    `mapstructure:"maxBackups"`
 }
